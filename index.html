@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Eul Voix deul Ch'nord – Insolite</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #eef0f3;
+    color: #1b1b1b;
+  }
+  .page { max-width: 480px; margin: 0 auto; background: #fff; min-height: 100vh; }
+
+  /* Barre du haut */
+  .topbar {
+    background: #0d2b52; color: #fff;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 14px;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13px;
+  }
+  .burger { display: flex; flex-direction: column; gap: 4px; }
+  .burger span { width: 20px; height: 2px; background: #fff; display: block; }
+  .abo {
+    background: #e2001a; color: #fff; font-weight: bold;
+    padding: 6px 10px; border-radius: 3px; font-size: 12px;
+  }
+
+  /* Titre du journal */
+  .masthead {
+    text-align: center; padding: 14px 10px 10px;
+    border-bottom: 3px solid #0d2b52;
+  }
+  .masthead .name {
+    font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif; font-weight: 900;
+    font-size: 26px; color: #0d2b52; letter-spacing: -0.5px;
+    line-height: 1; text-transform: uppercase;
+  }
+  .masthead .tag {
+    font-family: Arial, sans-serif; font-size: 10px; color: #777;
+    letter-spacing: 2px; text-transform: uppercase; margin-top: 6px;
+  }
+
+  /* Rubriques */
+  .nav {
+    display: flex; gap: 16px; overflow: hidden; white-space: nowrap;
+    padding: 9px 14px; border-bottom: 1px solid #e3e3e3;
+    font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; color: #0d2b52;
+  }
+  .nav .active { color: #e2001a; }
+
+  /* Article */
+  article { padding: 16px 16px 8px; }
+  .crumb {
+    font-family: Arial, sans-serif; font-size: 12px; color: #666; margin-bottom: 10px;
+  }
+  .label {
+    display: inline-block; background: #e2001a; color: #fff;
+    font-family: Arial, sans-serif; font-size: 11px; font-weight: bold;
+    text-transform: uppercase; letter-spacing: 1px; padding: 3px 7px; margin-right: 6px;
+  }
+  h1 {
+    font-size: 26px; line-height: 1.2; margin: 10px 0 12px; color: #111;
+  }
+  .meta {
+    font-family: Arial, sans-serif; font-size: 12px; color: #666;
+    padding-bottom: 12px; border-bottom: 1px solid #e3e3e3; margin-bottom: 14px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .meta b { color: #0d2b52; }
+  .share { display: flex; gap: 6px; }
+  .share span {
+    width: 26px; height: 26px; border-radius: 50%; background: #0d2b52;
+    color: #fff; font-size: 11px; display: flex; align-items: center; justify-content: center;
+    font-weight: bold;
+  }
+
+  figure { margin: 0 -16px 6px; }
+  figure svg { display: block; width: 100%; height: auto; }
+  figcaption {
+    font-family: Arial, sans-serif; font-size: 11px; color: #777;
+    padding: 6px 16px 0; font-style: italic;
+  }
+
+  .chapo { font-weight: bold; font-size: 17px; line-height: 1.5; margin: 16px 0 14px; }
+  article p { font-size: 16.5px; line-height: 1.6; margin-bottom: 14px; }
+
+  blockquote {
+    border-left: 4px solid #e2001a; background: #f6f7f9;
+    padding: 14px 14px 12px; margin: 18px 0;
+  }
+  blockquote p { font-style: italic; font-size: 17px !important; margin-bottom: 10px !important; }
+  blockquote cite {
+    display: block; font-style: normal; font-family: Arial, sans-serif;
+    font-size: 13px; color: #0d2b52; font-weight: bold;
+  }
+
+  /* Pub */
+  .ad-wrap { padding: 6px 16px 20px; }
+  .ad-label {
+    font-family: Arial, sans-serif; font-size: 10px; color: #999;
+    text-transform: uppercase; letter-spacing: 1.5px; text-align: center; margin-bottom: 6px;
+  }
+  .ad {
+    border-radius: 10px; overflow: hidden; position: relative;
+    background: linear-gradient(135deg, #ff00c8 0%, #7a00ff 45%, #00e5ff 100%);
+    color: #fff; font-family: "Arial Black", Arial, sans-serif; padding: 16px 14px 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.18);
+  }
+  .ad .badge {
+    position: absolute; top: 10px; right: -30px; transform: rotate(35deg);
+    background: #ffe600; color: #000; font-size: 10px; padding: 3px 34px;
+  }
+  .ad h3 { font-size: 22px; line-height: 1.05; text-shadow: 2px 2px 0 #000; }
+  .ad h3 small { display: block; font-size: 12px; margin-top: 4px; text-shadow: 1px 1px 0 #000; }
+  .ad-body { display: flex; gap: 10px; align-items: center; margin-top: 10px; }
+  .ad-body svg { flex: 0 0 110px; }
+  .ad ul { list-style: none; font-family: Arial, sans-serif; font-weight: bold; font-size: 12.5px; }
+  .ad ul li { margin-bottom: 5px; }
+  .ad .cta {
+    display: block; text-align: center; margin-top: 12px;
+    background: #ffe600; color: #000; padding: 10px; border-radius: 6px;
+    font-size: 15px; border: 2px solid #000;
+  }
+  .ad .fine {
+    font-family: Arial, sans-serif; font-weight: normal; font-size: 9px;
+    opacity: .85; margin-top: 8px; text-align: center;
+  }
+
+  /* Bouton */
+  .more { text-align: center; padding: 6px 16px 34px; border-top: 1px solid #e3e3e3; padding-top: 22px; }
+  .more button {
+    width: 100%; background: #0d2b52; color: #fff; border: none;
+    font-family: Arial, sans-serif; font-weight: bold; font-size: 15px;
+    padding: 14px; border-radius: 4px;
+  }
+  .more small {
+    display: block; margin-top: 8px; font-family: Arial, sans-serif;
+    font-size: 10.5px; color: #9a9a9a;
+  }
+  .more small u { color: #8a8a8a; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="topbar">
+    <div class="burger"><span></span><span></span><span></span></div>
+    <div>Jeudi 19 novembre 2026</div>
+    <div class="abo">S'abonner</div>
+  </div>
+
+  <header class="masthead">
+    <div class="name">Eul' Voix deul' Ch'nord</div>
+    <div class="tag">Eul' quotidien deul' région</div>
+  </header>
+
+  <nav class="nav">
+    <span class="active">Lille</span><span>Métropole</span><span>Sports</span><span>Faits divers</span><span>Insolite</span>
+  </nav>
+
+  <article>
+    <div class="crumb">Accueil › Lille et sa région › Insolite</div>
+    <span class="label">Insolite</span>
+    <h1>Lewis Hamilton et Max Verstappen se retirent officiellement du sport automobile</h1>
+
+    <div class="meta">
+      <div>Par <b>la rédaction</b><br>Publié le 19/11/2026 à 9h53</div>
+      <div class="share"><span>f</span><span>X</span><span>✉</span></div>
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#14254a"/>
+            <stop offset="1" stop-color="#e86a4a"/>
+          </linearGradient>
+        </defs>
+        <rect width="480" height="270" fill="url(#sky)"/>
+        <!-- étoile filante -->
+        <line x1="60" y1="40" x2="190" y2="85" stroke="#fff" stroke-width="2" opacity=".5"/>
+        <polygon points="200,80 205,92 218,92 208,100 212,113 200,105 188,113 192,100 182,92 195,92" fill="#ffe27a"/>
+        <circle cx="390" cy="50" r="2" fill="#fff"/><circle cx="330" cy="30" r="1.5" fill="#fff"/><circle cx="430" cy="90" r="1.5" fill="#fff"/>
+        <!-- route -->
+        <rect y="200" width="480" height="70" fill="#2b2b2b"/>
+        <rect x="20" y="232" width="50" height="6" fill="#f2f2f2"/><rect x="120" y="232" width="50" height="6" fill="#f2f2f2"/>
+        <rect x="220" y="232" width="50" height="6" fill="#f2f2f2"/><rect x="320" y="232" width="50" height="6" fill="#f2f2f2"/>
+        <rect x="420" y="232" width="50" height="6" fill="#f2f2f2"/>
+        <!-- lignes de vitesse -->
+        <line x1="40" y1="170" x2="160" y2="170" stroke="#fff" stroke-width="3" opacity=".6"/>
+        <line x1="70" y1="185" x2="170" y2="185" stroke="#fff" stroke-width="3" opacity=".4"/>
+        <line x1="20" y1="155" x2="150" y2="155" stroke="#fff" stroke-width="3" opacity=".3"/>
+        <!-- voiture -->
+        <g transform="translate(180,128)">
+          <path d="M0,62 L10,40 Q20,32 40,30 L80,28 Q100,8 140,8 Q170,8 190,30 L230,34 Q248,38 250,52 L250,62 Z" fill="#e2001a"/>
+          <path d="M92,30 Q108,14 138,14 Q160,14 176,30 Z" fill="#9fd3ff"/>
+          <rect x="2" y="54" width="248" height="10" rx="4" fill="#a80014"/>
+          <circle cx="55" cy="66" r="18" fill="#111"/><circle cx="55" cy="66" r="8" fill="#ccc"/>
+          <circle cx="200" cy="66" r="18" fill="#111"/><circle cx="200" cy="66" r="8" fill="#ccc"/>
+          <circle cx="246" cy="46" r="4" fill="#ffe27a"/>
+        </g>
+      </svg>
+      <figcaption>Une trajectoire fulgurante, selon les observateurs. Illustration.</figcaption>
+    </figure>
+
+    <p class="chapo">Ce jeudi 19 novembre 2026 dans la région Lilloise, un nouveau talent s'est imposé comme une révélation.</p>
+
+    <p>Léna B. est toute nouvelle dans cette discipline, pourtant, elle est annoncée par les plus grands experts en la matière comme une « étoile filante » de l'auto.</p>
+
+    <p>Nous avons interrogé une pointure du secteur, son analyse est brève mais pleine de promesses enthousiastes :</p>
+
+    <blockquote>
+      <p>« C'est une dinguerie elle est trop forte. Elle est née pour tenir un volant et les pédales s'inclinent devant sa maîtrise de la voiture. En plus c'est le sang de la veine j'ai juré ! »</p>
+      <cite>— R. Vitse, expert incontestable du domaine et un chouette type</cite>
+    </blockquote>
+
+    <p>Nous suivrons de près son ascension et lui souhaitons un succès à la hauteur de son swag.</p>
+  </article>
+
+  <div class="ad-wrap">
+    <div class="ad-label">Publicité</div>
+    <div class="ad">
+      <div class="badge">-90% 🔥</div>
+      <h3>LE BONNET SKIBIDI-CALVASSE™
+        <small>Ta calvitie ? Elle n'existe plus. Elle a été rizzée.</small>
+      </h3>
+      <div class="ad-body">
+        <svg viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="60" cy="100" rx="44" ry="6" fill="#000" opacity=".25"/>
+          <path d="M14,78 Q14,22 60,20 Q106,22 106,78 Z" fill="#ffe600" stroke="#000" stroke-width="3"/>
+          <rect x="10" y="72" width="100" height="18" rx="6" fill="#00e5ff" stroke="#000" stroke-width="3"/>
+          <circle cx="60" cy="14" r="10" fill="#ff00c8" stroke="#000" stroke-width="3"/>
+          <text x="60" y="58" font-family="Arial Black, Arial" font-size="18" text-anchor="middle" fill="#000">67</text>
+          <circle cx="36" cy="44" r="3" fill="#000"/><circle cx="84" cy="44" r="3" fill="#000"/>
+        </svg>
+        <ul>
+          <li>🧠 Technologie CacheMiz Air™ révolutionnaire</li>
+          <li>⚡ Repousse virtuelle en 0,67 s</li>
+          <li>💀 Aura +1000 garantie</li>
+          <li>🧪 Validé par 0 dermatologue</li>
+        </ul>
+      </div>
+      <span class="cta">JE CACHE MON CRÂNE MAINTENANT</span>
+      <div class="fine">Offre non cumulable avec la dignité. Les cheveux ne repoussent pas vraiment, mais on ne voit plus rien.</div>
+    </div>
+  </div>
+
+  <div class="more">
+    <button>Lire plus d'articles</button>
+    <small>Nécessite un abonnement méga cher ou de vendre votre âme, <u>voir conditions</u></small>
+  </div>
+
+  <footer style="text-align:center;font-family:Arial,sans-serif;font-size:9.5px;color:#aaa;padding:0 16px 18px;">
+    Page parodique, évidemment. Aucun lien avec un vrai journal.
+  </footer>
+
+</div>
+</body>
+</html>
